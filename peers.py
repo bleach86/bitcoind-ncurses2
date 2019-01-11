@@ -54,7 +54,7 @@ class PeersView(view.View):
                                 # syncnodes are outgoing only
                                 self._pad.addstr(1+index-offset, 1, 'S')
 
-                        addr_str = peer['addr'].replace(".onion","").replace(":8333","").replace(":    18333","").strip("[").strip("]")
+                        addr_str = peer['addr'].replace(".onion","").replace(":42071","").replace(":    42075","").strip("[").strip("]")
 
                         # truncate long ip addresses (ipv6)
                         addr_str = (addr_str[:17] + '...') if len(addr_str) > 20 else addr_str
