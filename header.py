@@ -49,9 +49,9 @@ class HeaderView(object):
             "regtest": CRED + CBOLD,
         }
         currencies = {
-            "main": "BTC",
-            "test": "tBC",
-            "regtest": "rBC",
+            "main": "TUX",
+            "test": "TUX",
+            "regtest": "TUX",
         }
         version_color = colors.get(self._chain, CBOLD)
         currency = currencies.get(self._chain, "???")
