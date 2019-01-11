@@ -157,7 +157,7 @@ class TransactionView(view.View):
 
         self._pad.addstr(12, 1, "[PGUP/PGDN: browse]", CYELLOW)
         out_total = sum(out["value"] for out in transaction["vout"])
-        self._pad.addstr(12, 64, "Outputs: {: 5d} ({: 15.8f} BTC)".format(len(transaction["vout"]), out_total), CGREEN + CBOLD)
+        self._pad.addstr(12, 64, "Outputs: {: 5d} ({: 15.8f} TUX)".format(len(transaction["vout"]), out_total), CGREEN + CBOLD)
 
         if self._selected_output is None or self._output_offset is None:
             # Shouldn't happen
