@@ -136,7 +136,7 @@ class TransactionView(view.View):
                 else:
                     inoutstring = "???"
 
-                inputstr = "{:05d} {} {: 15.8f} BTC".format(i, inoutstring, inout["value"])
+                inputstr = "{:05d} {} {: 15.8f} TUX".format(i, inoutstring, inout["value"])
             else:
                 inputstr = "{:05d} {}:{:05d}".format(i, inp["txid"], inp["vout"])
 
@@ -178,7 +178,7 @@ class TransactionView(view.View):
             if i > offset+4: # this is lazy
                 break
 
-            # A 1 million BTC output would be rather surprising. Pad to six.
+            # A 1 million TUX output would be rather surprising. Pad to six.
             spk = out["scriptPubKey"]
             if "addresses" in spk:
                 if len(spk["addresses"]) > 1:
@@ -197,7 +197,7 @@ class TransactionView(view.View):
             else:
                 outputcolor = CGREEN
 
-            self._pad.addstr(14+i-offset, 1, "{:05d} {} {: 15.8f} BTC".format(i, outstring, out["value"]), outputcolor)
+            self._pad.addstr(14+i-offset, 1, "{:05d} {} {: 15.8f} TUX".format(i, outstring, out["value"]), outputcolor)
 
     async def _draw_no_transaction(self):
         CRED = curses.color_pair(3)
