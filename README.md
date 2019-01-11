@@ -1,6 +1,6 @@
-# bitcoind-ncurses2 v0.3.1
+# tuxcoind-ncurses2 v0.3.1
 
-Python ncurses front-end for bitcoind. Uses the JSON-RPC API.
+Python ncurses front-end for tuxcoind. Uses the JSON-RPC API.
 
 ![ScreenShot](/img/bitcoind-ncurses2.gif)
 
@@ -13,7 +13,7 @@ Python ncurses front-end for bitcoind. Uses the JSON-RPC API.
 
 ## Features
 
-* Updating monitor mode showing bitcoind's status, including:
+* Updating monitor mode showing tuxcoind's status, including:
 * Current block information: hash, height, fees, timestamp, age, diff, ...
 * Basic block explorer with fast seeking, no external DB required
 * Basic transaction viewer with fast seeking, best with -txindex=1
@@ -26,11 +26,11 @@ Python ncurses front-end for bitcoind. Uses the JSON-RPC API.
 ## Installation and usage
 
 ```
-git clone https://github.com/esotericnonsense/bitcoind-ncurses2
+git clone https://github.com/bleach86/tuxcoind-ncurses2
 ```
 
 ```
-pip3 install -r bitcoind-ncurses2/requirements.txt
+pip3 install -r tuxcoind-ncurses2/requirements.txt
 ```
 or, on Arch Linux:
 ```
@@ -38,12 +38,12 @@ pacman -S python-aiohttp python-async-timeout
 ```
 
 ```
-cd bitcoind-ncurses2
+cd tuxcoind-ncurses2
 python3 main.py
 ```
 
 bitcoind-ncurses2 will automatically use the cookie file available in
-~/.bitcoin/, or the RPC settings in ~/.bitcoin/bitcoin.conf. To use a different
+~/.tuxtcoin/, or the RPC settings in ~/.tuxcoin/tuxcoin.conf. To use a different
 datadir, specify the --datadir flag:
 
 ```
@@ -64,7 +64,7 @@ The author, esotericnonsense, can often be found milling around on #bitcoin
 Donations
 ---------
 
-If you have found bitcoind-ncurses2 useful, please consider donating.
+If you have found tuxcoind-ncurses2 useful, please consider donating.
 
 All funds go towards the operating costs of my hardware and future
 Bitcoin development projects.
@@ -72,3 +72,4 @@ Bitcoin development projects.
 ![ScreenShot](/img/3BYFucUnVNhZjUDf6tZweuZ5r9PPjPEcRv.png)
 
 **bitcoin 3BYFucUnVNhZjUDf6tZweuZ5r9PPjPEcRv**
+Original authors donation address retained
