@@ -26,7 +26,7 @@ class MonitorView(view.View):
         self._mempoolinfo = None  # raw mempoolinfo
         self._estimatesmartfee = {} # blocks -> feerate/kB
         self._dt = None
-        self._uptime = None # raw uptime from bitcoind (seconds)
+        self._uptime = None # raw uptime from tuxcoind (seconds)
 
         super().__init__()
 
@@ -125,7 +125,7 @@ class MonitorView(view.View):
 
         total_fees = Decimal(reward) - block_subsidy
 
-        self._pad.addstr(4, 1, "Block reward: {:.6f} BTC".format(
+        self._pad.addstr(4, 1, "Block reward: {:.6f} TUX".format(
             reward))
 
         if len(bb["tx"]) > 1:
@@ -141,7 +141,7 @@ class MonitorView(view.View):
                 sat_per_kb = ((total_fees * 1024) / total_tx_size) * 100000000
             else:
                 sat_per_kb = 0
-            self._pad.addstr(4, 34, "Fees: {: 8.6f} BTC ({: 6.2f}%, avg {: 6.2f} mBTC/tx, ~{: 7.0f} sat/kB)".format(total_fees, fee_pct, mbtc_per_tx, sat_per_kb))
+            self._pad.addstr(4, 34, "Fees: {: 8.6f} TUX ({: 6.2f}%, avg {: 6.2f} mTUX/tx, ~{: 7.0f} sat/kB)".format(total_fees, fee_pct, mbtc_per_tx, sat_per_kb))
 
         self._draw_pad_to_screen()
 
